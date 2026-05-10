@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import Blueprint, jsonify
 from models.vehiculos import Vehiculo
 
@@ -14,12 +13,8 @@ def get_vehiculo(id):
             "marca": vehiculo.marca,
             "modelo": vehiculo.modelo,
             "color": vehiculo.color,
-            "matricula": vehiculo.matricula
+            "matricula": vehiculo.matricula,
+            "tipo": vehiculo.tipo
         }), 200
     else: 
         return jsonify({"mensaje":"Vehículo no encontrado"}), 404
-=======
-from flask import Blueprint
-
-
->>>>>>> d6dcbcd5672e291f1674d6ace0d7d2a4120eb2c7

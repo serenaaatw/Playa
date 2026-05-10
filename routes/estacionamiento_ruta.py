@@ -27,4 +27,4 @@ def infoEstacionamiento(id):
  if info:
   return info.serialize() 
  else:
-  return print(f"El estacionamiento con el id {id} no existe")
+  return {"error" : f"El estacionamiento con el id {id} no existe"}

@@ -6,12 +6,14 @@ class Vehiculo(db.Model):
     color = db.Column(db.String(100))
     marca = db.Column(db.String(100))
     modelo = db.Column(db.String(100))
+    tipo= db.Column(db.String(40))
 
-    def __init__(self, matricula, color, marca, modelo):
+    def __init__(self, matricula, color, marca, modelo, tipo):
         self.matricula=matricula
         self.color=color
         self.marca=marca
         self.modelo=modelo
+        self.tipo= tipo
 
     def to_dict(self):
         return {
@@ -19,6 +21,7 @@ class Vehiculo(db.Model):
             'matricula':self.matricula,
             'color': self.color,
             'marca': self.marca,
-            'modelo': self.modelo
+            'modelo': self.modelo,
+            'tipo': self.tipo
 
         }
